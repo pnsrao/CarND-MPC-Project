@@ -60,7 +60,7 @@ provided to the MPC algorithm.
 	    double Lf = 2.67;
 	    px = px + v*cos(psi)*latency_sec;
 	    py = py + v*sin(psi)*latency_sec;
-	    psi = psi + v*deg2rad(25)*(delta/Lf)*latency_sec; //division by Lf 
+	    psi = psi - v*(delta/Lf)*latency_sec; //subtraction because delta needs to be inverted 
 	    v = v + acceleration*latency_sec;
 	  }
 ~~~~
